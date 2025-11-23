@@ -1,13 +1,13 @@
 {
   "site": {
-    "name": "Minimal Starter",
-    "tagline": "Your Creative Canvas",
-    "description": "A clean, minimal starter template providing the perfect foundation for your next project. Built with modern tools and ready for your creativity.",
-    "ogImage": "/og-image.png",
+    "name": "DadStrong.au",
+    "tagline": "Stand strong. Stay safe. Be heard.",
+    "description": "Legal and emotional support for single fathers in Australia. Navigate family law with confidence and dignity.",
+    "ogImage": "/logos/shield-father.png",
     "twitterHandle": "",
     "contact": {
-      "email": "contact@example.com",
-      "company": "Your Company",
+      "email": "support@dadstrong.au",
+      "company": "DadStrong Australia",
       "address": ""
     },
     "legal": {
@@ -16,6 +16,6 @@
     }
   },
   "theme": {
-    "defaultTheme": "dark"
+    "defaultTheme": "light"
   }
 }

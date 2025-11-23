@@ -1,12 +1,13 @@
 import RequireAuth from "@/components/RequireAuth";
-import RequireAdmin from "@/components/RequireAdmin";
-import Billing from "@/pages/billing";
-import BillingSuccess from "@/pages/billing-success";
-import Chat from "@/pages/chat";
-import Dashboard from "@/pages/dashboard";
 import Home from "@/pages/home";
 import SignIn from "@/pages/sign-in";
 import SignUp from "@/pages/sign-up";
+import Welcome from "@/pages/onboarding/welcome";
+import Disclaimer from "@/pages/onboarding/disclaimer";
+import Profile from "@/pages/onboarding/profile";
+import LegalAssistant from "@/pages/legal-assistant";
+import Journal from "@/pages/journal";
+import AVOToolkit from "@/pages/avo-toolkit";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 export function App() {
@@ -14,46 +15,37 @@ export function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/dashboard" element={<Home />} />
 
-        {/* Authentication routes */}
         <Route path="/signin" element={<SignIn />} />
         <Route path="/signup" element={<SignUp />} />
 
-        {/* Billing routes */}
-        <Route
-          path="/billing"
-          element={
-            <RequireAuth>
-              <Billing />
-            </RequireAuth>
-          }
-        />
-        <Route
-          path="/billing/success"
-          element={
-            <RequireAuth>
-              <BillingSuccess />
-            </RequireAuth>
-          }
-        />
+        <Route path="/onboarding/welcome" element={<Welcome />} />
+        <Route path="/onboarding/disclaimer" element={<Disclaimer />} />
+        <Route path="/onboarding/profile" element={<Profile />} />
 
-        {/* Chat routes */}
         <Route
-          path="/chat"
+          path="/legal-assistant"
           element={
             <RequireAuth>
-              <Chat />
+              <LegalAssistant />
             </RequireAuth>
           }
         />
-
-        {/* Admin Dashboard */}
         <Route
-          path="/admin"
+          path="/journal"
           element={
-            <RequireAdmin>
-              <Dashboard />
-            </RequireAdmin>
+            <RequireAuth>
+              <Journal />
+            </RequireAuth>
+          }
+        />
+        <Route
+          path="/avo-toolkit"
+          element={
+            <RequireAuth>
+              <AVOToolkit />
+            </RequireAuth>
           }
         />
       </Routes>
